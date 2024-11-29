@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <style>
+        :root {
+            --primary-color: #fee3c2;
+            --secondary-color: #e6560f;
+        }
+        body {
+            background-color: var(--primary-color);
+            color: var(--primary-color);
+            display: block;
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+            font-family: 'Playfair Display', serif;
+        }
+        .page-bg-black {
+            background-color: var(--secondary-color);
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: 800px;
+            height: 900px;
+            border-radius: 50px;
+            border: none;
+
+            /* -web85it-filter: blur(5px); */
+        }
+        .page-bg-blue {
+            background-image: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/688/original/dark-theme.jpg?1688172632');
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: auto;
+            height: auto;
+        }
+        .main-image {
+            border: 0;
+        }
+
+        img {
+            width: 200px;
+            border: 1px solid var(--primary-color);
+        }
+        img-grids {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+        }
+        img:hover {
+            transform: scale(1.2);
+        }
+        p {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .change-theme-button {
+            color: black;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 8px;
+            width: 100px;
+            height: 40px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        button:hover {
+            cursor: pointer;
+            background: #e69d79;
+            color: var(--primary-color);
+            transition: all 150ms eas-in-out;
+        }
+        .spices {
+            height: 180px;
+        }
+        .cooking-pan {
+            height: 180px;
+        }
+        .served-food {
+            height: 180px;
+        }
+        .get-recipes {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .coder {
+            color: black;
+        }
+    </style>
+    <body>
+        <div class="page-bg-black">
+            <button class="change-theme-button">Change theme</button>
+            <h1>My Favourite Hobby</h1>
+            <h2>Cooking Indian food</h2>
+
+            <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/326/original/free-indian-mother-making-sweets-4415737-3659323.png?1687908870"
+                class="main-image"
+            />
+            <div class="img-grids"></div>
+            <img
+                src="
+    https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/320/original/Which-spices-are-used-in-Indian-cooking.png?1687908590"
+                class="spices"
+            />
+            <img
+                src="
+
+    https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/353/original/Brantman_200812_Edible_Punita_045.jpg?1687910000"
+                class="cooking-pan"
+            />
+            <img
+                src="
+    https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/310/original/_126008614_gettyimages-1363049240-170667a.jpg?1687908437"
+                class="served-food"
+            />
+            <p>
+                My culinary adventures as a hobby started off as an experiment
+                in my home kitchen. After gathering working knowledge from the
+                lessons I took from my mother, one fine Sunday morning, I popped
+                into the kitchen. I wanted to try my newly acquired skill and
+                cook something for Sunday lunch – which was a sort of a
+                challenge!
+            </p>
+            <h2>What’s so great about Indian cooking?</h2>
+            <p>
+                Indian food is all about its herbs, spices and their rich aroma,
+                which are very hard to find in western food in general. Indian
+                food is very easy to cook and this is one vital reason that
+                makes Indian cooking attractive and hassle-free for any newbie!
+                Indian cuisine differs across the country’s myriad cultures
+                flourishing across its regions and locations. It also varies
+                seasonally, depending on which fruits or vegetables are
+                available at the time. Therefore, not only the spices but the
+                various seasonal fruits and vegetables do add that extra flavor
+                to, and liking for Indian food. The ingredients and the seasonal
+                variances are thus the exotic life-force of Indian food.
+            </p>
+            <a
+                href="https://www.foodnetwork.com/recipes/photos/indian-recipes"
+                target="_blank"
+                class="get-recipes"
+                >Click here to get delicious Indian recipes
+            </a>
+        </div>
+        <p class="coder">Coded with 🤍 by Jenice Martin</p>
+    </body>
+    <script>
+        function changeTheme() {
+            let themeClass = document.querySelector('.page-bg-black');
+            themeClass.classList.add('page-bg-blue');
+        }
+
+        let themeButton = document.querySelector('button');
+        themeButton.addEventListener('click', changeTheme);
+    </script>
+</html>
